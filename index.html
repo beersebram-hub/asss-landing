@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASSS — Automated Smart Sample Storage</title>
+  <meta name="description" content="ASSS is an automated smart sample storage system that lets researchers find, retrieve, and return lab samples in seconds.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="navbar">
+  <a class="navbar-logo" href="#">
+    <img src="assets/logo.png" alt="ASSS logo" height="40">
+  </a>
+  <a href="video.html" onclick="trackClick('nav-cta')" class="btn-primary">See more →</a>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <span class="hero-eyebrow">Science-based Entrepreneurship · Utrecht University</span>
+  <h1>Your lab samples, always where you need them.</h1>
+
+  <div class="hero-sketch">
+    <!-- Test tube SVG -->
+    <span class="sketch-icon" aria-hidden="true">
+      <svg width="48" height="96" viewBox="0 0 48 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 8 L16 68 Q16 84 24 84 Q32 84 32 68 L32 8" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round" fill="#E6F2FA"/>
+        <line x1="12" y1="8" x2="36" y2="8" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round"/>
+        <line x1="16" y1="62" x2="32" y2="62" stroke="#2B7DB8" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+        <circle cx="23" cy="72" r="3" fill="#2B7DB8" opacity="0.4"/>
+      </svg>
+    </span>
+  </div>
+
+  <p class="hero-sub">ASSS is an automated smart sample storage system that lets researchers find, retrieve, and return lab samples in seconds — with temperature control, access management, and automatic restocking built in.</p>
+
+  <div class="cta-row">
+    <a href="video.html" onclick="trackClick('hero-cta')" class="btn-primary">See more →</a>
+    <a href="video.html" onclick="trackClick('hero-signup')" class="btn-secondary">Sign up</a>
+  </div>
+</section>
+
+<!-- ── Quote banner ── -->
+<div class="quote-banner">
+  <div class="quote-inner">
+    <p class="quote-text">"We spent a whole day looking for a sample. It was on another floor."</p>
+    <p class="quote-attr">— Lab researcher, prototype session feedback</p>
+  </div>
+
+  <!-- Lab coat decorative -->
+  <span class="quote-coat sketch-icon" aria-hidden="true">
+    <svg width="90" height="120" viewBox="0 0 90 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30 10 Q28 6 22 8 L8 18 Q4 22 6 30 L12 58" stroke="#9DCCE8" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      <path d="M60 10 Q62 6 68 8 L82 18 Q86 22 84 30 L78 58" stroke="#9DCCE8" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      <path d="M30 10 Q30 4 45 4 Q60 4 60 10" stroke="#9DCCE8" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      <path d="M30 10 L26 30 L24 110 L66 110 L64 30 L60 10" stroke="#9DCCE8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M36 10 L40 30" stroke="#9DCCE8" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M54 10 L50 30" stroke="#9DCCE8" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="45" cy="50" r="2" fill="#9DCCE8"/>
+      <circle cx="45" cy="64" r="2" fill="#9DCCE8"/>
+      <circle cx="45" cy="78" r="2" fill="#9DCCE8"/>
+    </svg>
+  </span>
+</div>
+
+<!-- ── Problem section ── -->
+<section class="problem-section">
+  <div class="section-inner">
+    <p class="section-label">The problem</p>
+    <h2>Lab storage is broken</h2>
+    <p class="section-body">In shared research labs, samples go missing, get mislabelled, or end up at the wrong temperature. Hours are wasted, experiments fail, and expensive reagents get reordered unnecessarily.</p>
+
+    <div class="problem-cards">
+
+      <!-- Card 1: Fridge -->
+      <div class="problem-card">
+        <div class="card-sketch">
+          <span class="sketch-icon" aria-hidden="true">
+            <svg width="56" height="72" viewBox="0 0 56 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="4" width="40" height="64" rx="3" stroke="#2B7DB8" stroke-width="2.2" fill="#E6F2FA"/>
+              <line x1="8" y1="24" x2="48" y2="24" stroke="#2B7DB8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="44" y1="14" x2="44" y2="22" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="44" y1="34" x2="44" y2="48" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round"/>
+              <text x="22" y="52" font-size="16" fill="#2B7DB8" font-family="serif" font-weight="bold" opacity="0.7">?</text>
+            </svg>
+          </span>
+        </div>
+        <h3>Hours lost per week</h3>
+        <p>Researchers waste time searching instead of doing science — samples hidden in the wrong fridge or mislabelled box.</p>
+      </div>
+
+      <!-- Card 2: Lab coat with X -->
+      <div class="problem-card">
+        <div class="card-sketch">
+          <span class="sketch-icon" aria-hidden="true">
+            <svg width="56" height="72" viewBox="0 0 56 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 8 Q19 5 15 6 L6 13 Q4 16 5 21 L9 40" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+              <path d="M36 8 Q37 5 41 6 L50 13 Q52 16 51 21 L47 40" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+              <path d="M20 8 Q20 4 28 4 Q36 4 36 8" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+              <path d="M20 8 L18 22 L17 68 L39 68 L38 22 L36 8" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="#E6F2FA"/>
+              <path d="M24 8 L26 20" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M32 8 L30 20" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="22" y1="34" x2="30" y2="42" stroke="#2B7DB8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="30" y1="34" x2="22" y2="42" stroke="#2B7DB8" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </div>
+        <h3>Compromised samples</h3>
+        <p>Wrong temperatures ruin samples silently. No automated monitoring means damage goes undetected until experiments fail.</p>
+      </div>
+
+      <!-- Card 3: Laptop -->
+      <div class="problem-card">
+        <div class="card-sketch">
+          <span class="sketch-icon" aria-hidden="true">
+            <svg width="72" height="56" viewBox="0 0 72 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="4" width="56" height="38" rx="3" stroke="#2B7DB8" stroke-width="2.2" fill="#E6F2FA"/>
+              <rect x="13" y="9" width="46" height="28" rx="2" stroke="#2B7DB8" stroke-width="1.5" fill="#fff"/>
+              <line x1="4" y1="48" x2="68" y2="48" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="22" y1="18" x2="22" y2="30" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="26" y1="15" x2="26" y2="30" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="30" y1="20" x2="30" y2="30" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="34" y1="17" x2="34" y2="30" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="38" y1="22" x2="38" y2="30" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="42" y1="14" x2="42" y2="30" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </div>
+        <h3>No access control</h3>
+        <p>Sensitive samples are accessible to everyone, leading to accidental contamination, mix-ups, and "sample theft".</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Solution / How it works ── -->
+<section class="solution-section">
+  <div class="section-inner">
+    <p class="section-label">The solution</p>
+    <h2>How ASSS works</h2>
+
+    <div class="value-prop">
+      For lab researchers who want to easily locate their samples, ASSS is a smart storage system that provides optimised sample organisation — with automatic reordering and pre-dilution of stocks.
+    </div>
+
+    <div class="timeline">
+
+      <!-- Step 1 -->
+      <div class="timeline-step">
+        <div class="step-left">
+          <div class="step-num">1</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h3>Log in with your researcher ID</h3>
+          <p>Scan your card for role-based access. Only see and retrieve samples you're authorised to use.</p>
+        </div>
+        <div class="step-sketch sketch-icon" aria-hidden="true">
+          <svg width="40" height="68" viewBox="0 0 40 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 6 L12 50 Q12 62 20 62 Q28 62 28 50 L28 6" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round" fill="#E6F2FA"/>
+            <line x1="9" y1="6" x2="31" y2="6" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="12" y1="46" x2="28" y2="46" stroke="#2B7DB8" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            <circle cx="20" cy="54" r="3" fill="#2B7DB8" opacity="0.45"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="timeline-step">
+        <div class="step-left">
+          <div class="step-num">2</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h3>Search and select your sample</h3>
+          <p>Find any sample by name, ID, or category on the built-in screen. Results appear instantly.</p>
+        </div>
+        <div class="step-sketch sketch-icon" aria-hidden="true">
+          <svg width="62" height="48" viewBox="0 0 62 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="48" height="32" rx="3" stroke="#2B7DB8" stroke-width="2.2" fill="#E6F2FA"/>
+            <rect x="9" y="9" width="38" height="22" rx="2" stroke="#2B7DB8" stroke-width="1.5" fill="#fff"/>
+            <line x1="0" y1="42" x2="56" y2="42" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="16" y1="14" x2="16" y2="24" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="20" y1="12" x2="20" y2="24" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="24" y1="16" x2="24" y2="24" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="28" y1="13" x2="28" y2="24" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="32" y1="17" x2="32" y2="24" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="36" y1="11" x2="36" y2="24" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="40" y1="15" x2="40" y2="24" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="timeline-step">
+        <div class="step-left">
+          <div class="step-num">3</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h3>The machine retrieves it for you</h3>
+          <p>The correct temperature zone is selected automatically. Your sample is dispensed within 30 seconds.</p>
+        </div>
+        <div class="step-sketch sketch-icon" aria-hidden="true">
+          <svg width="52" height="72" viewBox="0 0 52 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="4" width="40" height="64" rx="3" stroke="#2B7DB8" stroke-width="2.2" fill="#E6F2FA"/>
+            <rect x="11" y="8" width="30" height="12" rx="2" stroke="#2B7DB8" stroke-width="1.5" fill="#fff"/>
+            <rect x="11" y="24" width="8" height="8" rx="1" stroke="#2B7DB8" stroke-width="1.5" fill="#fff"/>
+            <rect x="22" y="24" width="8" height="8" rx="1" stroke="#2B7DB8" stroke-width="1.5" fill="#fff"/>
+            <rect x="33" y="24" width="8" height="8" rx="1" stroke="#2B7DB8" stroke-width="1.5" fill="#fff"/>
+            <rect x="11" y="35" width="8" height="8" rx="1" stroke="#2B7DB8" stroke-width="1.5" fill="#fff"/>
+            <rect x="22" y="35" width="8" height="8" rx="1" stroke="#2B7DB8" stroke-width="1.5" fill="#fff"/>
+            <rect x="33" y="35" width="8" height="8" rx="1" stroke="#2B7DB8" stroke-width="1.5" fill="#fff"/>
+            <rect x="11" y="46" width="8" height="8" rx="1" stroke="#2B7DB8" stroke-width="1.5" fill="#fff"/>
+            <rect x="22" y="46" width="8" height="8" rx="1" stroke="#2B7DB8" stroke-width="1.5" fill="#fff"/>
+            <rect x="33" y="46" width="8" height="8" rx="1" stroke="#2B7DB8" stroke-width="1.5" fill="#fff"/>
+            <rect x="16" y="58" width="20" height="6" rx="1" stroke="#2B7DB8" stroke-width="1.5" fill="#fff"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="timeline-step">
+        <div class="step-left">
+          <div class="step-num">4</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h3>Return, log, reorder — automatically</h3>
+          <p>On return, the system re-sorts the sample, logs usage for reproducibility, and auto-reorders when stock is low.</p>
+        </div>
+        <div class="step-sketch sketch-icon" aria-hidden="true">
+          <svg width="40" height="68" viewBox="0 0 40 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 6 L13 48 Q13 62 20 62 Q27 62 27 48 L26 6" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round" fill="#E6F2FA"/>
+            <line x1="10" y1="6" x2="30" y2="6" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="13" y1="44" x2="27" y2="44" stroke="#2B7DB8" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            <circle cx="20" cy="54" r="2.5" fill="#2B7DB8" opacity="0.4"/>
+            <path d="M28 2 Q34 5 33 12" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            <polyline points="31,11 33,12 35,9" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Metric cards -->
+    <div class="metrics">
+      <div class="metric-card">
+        <div class="metric-value">≤30s</div>
+        <div class="metric-label">Average sample retrieval time</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">100%</div>
+        <div class="metric-label">Usage logs for reproducibility</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">Zero</div>
+        <div class="metric-label">Manual reorder actions needed</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Footer CTA ── -->
+<div class="footer-cta">
+  <h2>Interested in ASSS for your lab?</h2>
+  <p>We are currently validating demand. Sign up to be among the first to try it.</p>
+  <a href="video.html" onclick="trackClick('footer-cta')" class="btn-white">See more →</a>
+</div>
+
+<!-- ── Footer bar ── -->
+<footer class="footer-bar">
+  ASSS · Utrecht University · Science-based Entrepreneurship 2026 · Smoke test — no product is available yet
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

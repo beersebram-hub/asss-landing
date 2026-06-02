@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+:root {
+  --blue-primary: #2B7DB8;
+  --blue-dark: #1A5C8A;
+  --blue-darkest: #0F3D5C;
+  --blue-light: #E6F2FA;
+  --blue-mid: #9DCCE8;
+  --text-primary: #1a1a1a;
+  --text-secondary: #555;
+  --text-muted: #888;
+  --bg: #f7f8fa;
+  --surface: #fff;
+  --border: rgba(0,0,0,0.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+h1, h2, .quote-text { font-family: 'DM Serif Display', serif; }
+
+a { color: inherit; text-decoration: none; }
+
+img { display: block; max-width: 100%; }
+
+/* ── Buttons ── */
+
+.btn-primary {
+  background: var(--blue-primary);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-primary:hover  { background: var(--blue-dark); }
+.btn-primary:active { transform: scale(0.98); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.15s;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-secondary:hover { background: var(--blue-light); }
+
+/* ── Navbar ── */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo img { height: 40px; width: auto; }
+
+/* ── Hero ── */
+
+.hero {
+  background: var(--surface);
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: var(--blue-light);
+  color: var(--blue-dark);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+}
+
+.hero-sub {
+  font-size: 18px;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  line-height: 1.65;
+}
+
+.hero-sketch {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+  opacity: 0.75;
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.hero-counter {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+}
+
+#confirmed-msg {
+  display: none;
+  margin-top: 0.5rem;
+  font-size: 13px;
+  color: var(--blue-primary);
+  font-weight: 500;
+}
+
+/* ── Quote banner ── */
+
+.quote-banner {
+  background: var(--blue-darkest);
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-text {
+  font-size: 28px;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.quote-attr {
+  font-size: 14px;
+  color: var(--blue-mid);
+  letter-spacing: 0.02em;
+}
+
+.quote-coat {
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.15;
+}
+
+/* ── Sections shared ── */
+
+section { padding: 4.5rem 2rem; }
+
+.section-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-primary);
+  margin-bottom: 0.6rem;
+}
+
+section h2 {
+  font-size: 38px;
+  margin-bottom: 1.25rem;
+  line-height: 1.15;
+}
+
+.section-body {
+  font-size: 17px;
+  color: var(--text-secondary);
+  max-width: 640px;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+/* ── Problem cards ── */
+
+.problem-section { background: var(--bg); }
+
+.problem-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.problem-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem;
+}
+
+.problem-card .card-sketch {
+  margin-bottom: 1rem;
+}
+
+.problem-card h3 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.problem-card p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── How it works ── */
+
+.solution-section { background: var(--surface); }
+
+.value-prop {
+  border-left: 3px solid var(--blue-primary);
+  padding: 1rem 1.25rem;
+  background: var(--blue-light);
+  border-radius: 0 10px 10px 0;
+  font-size: 16px;
+  color: var(--blue-darkest);
+  line-height: 1.65;
+  margin-bottom: 2.5rem;
+  max-width: 640px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 3rem;
+  max-width: 640px;
+}
+
+.timeline-step {
+  display: flex;
+  gap: 1.25rem;
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.timeline-step:last-child { padding-bottom: 0; }
+
+.step-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--blue-primary);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.step-line {
+  width: 2px;
+  flex: 1;
+  background: var(--blue-light);
+  margin-top: 4px;
+}
+
+.timeline-step:last-child .step-line { display: none; }
+
+.step-content {
+  padding-top: 6px;
+  flex: 1;
+}
+
+.step-content h3 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.step-content p {
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.step-sketch {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2px;
+  opacity: 0.8;
+}
+
+/* ── Metric cards ── */
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.metric-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+}
+
+.metric-value {
+  font-family: 'DM Serif Display', serif;
+  font-size: 42px;
+  color: var(--blue-primary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* ── Footer CTA ── */
+
+.footer-cta {
+  background: var(--blue-darkest);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.footer-cta h2 {
+  font-size: 36px;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-cta p {
+  font-size: 17px;
+  color: var(--blue-mid);
+  margin-bottom: 2rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.btn-white {
+  background: #fff;
+  color: var(--blue-darkest);
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-white:hover  { opacity: 0.92; }
+.btn-white:active { transform: scale(0.98); }
+
+/* ── Footer bar ── */
+
+.footer-bar {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 1.25rem 2rem;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ── Sketch icon ── */
+
+.sketch-icon {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 600px) {
+  .hero h1        { font-size: 32px; }
+  .problem-cards  { grid-template-columns: 1fr; }
+  .metrics        { grid-template-columns: 1fr; }
+  .cta-row        { flex-direction: column; align-items: stretch; }
+  section         { padding: 3rem 1.25rem; }
+  .sketch-icon    { display: none; }
+  .quote-coat     { display: none; }
+  .hero           { padding: 3rem 1.25rem 2.5rem; }
+  section h2      { font-size: 28px; }
+  .quote-text     { font-size: 22px; }
+  .footer-cta h2  { font-size: 26px; }
+}

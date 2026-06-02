@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASSS — See how it works</title>
+  <meta name="description" content="Watch how ASSS automates lab sample storage and sign up for early access.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Video page specific ── */
+
+    .video-page-main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+
+    .video-eyebrow {
+      display: inline-block;
+      background: var(--blue-light);
+      color: var(--blue-dark);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.02em;
+    }
+
+    .video-page-main h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+
+    .video-page-main .lead {
+      font-size: 17px;
+      color: var(--text-secondary);
+      margin-bottom: 2.25rem;
+      line-height: 1.65;
+    }
+
+    /* ── Video placeholder ── */
+
+    .video-wrapper {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: var(--blue-darkest);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      color: #fff;
+      position: relative;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-placeholder-content {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .video-play-icon {
+      width: 72px;
+      height: 72px;
+      background: rgba(255,255,255,0.15);
+      border: 2px solid rgba(255,255,255,0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+    }
+
+    .video-play-icon svg {
+      margin-left: 4px;
+    }
+
+    .video-placeholder-content p {
+      font-size: 15px;
+      color: var(--blue-mid);
+      margin-top: 0.5rem;
+    }
+
+    .video-placeholder-content strong {
+      display: block;
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    /* ── Sign-up section ── */
+
+    .signup-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+    }
+
+    .signup-section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      margin-bottom: 0.5rem;
+    }
+
+    .signup-section p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .google-form-wrapper {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .google-form-wrapper iframe {
+      width: 100%;
+      border: none;
+      display: block;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      transition: color 0.15s;
+    }
+
+    .back-link:hover { color: var(--blue-primary); }
+
+    @media (max-width: 600px) {
+      .video-page-main { padding: 2rem 1.25rem 3rem; }
+      .video-page-main h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="navbar">
+  <a class="navbar-logo" href="index.html">
+    <img src="assets/logo.png" alt="ASSS logo" height="40">
+  </a>
+  <a href="index.html" class="btn-secondary" style="font-size:14px; padding:9px 20px;">← Back</a>
+</nav>
+
+<!-- ── Main content ── -->
+<main class="video-page-main">
+
+  <a href="index.html" class="back-link">← Back to overview</a>
+
+  <span class="video-eyebrow">ASSS in action</span>
+  <h1>See how ASSS works</h1>
+  <p class="lead">Watch the short explainer below, then sign up to be among the first labs to try ASSS.</p>
+
+  <!-- Video — replace the placeholder once your video is ready -->
+  <div class="video-wrapper" id="video-wrapper">
+    <!-- To add your video: replace this block with:
+         <video controls poster="assets/video-poster.jpg">
+           <source src="assets/asss-explainer.mp4" type="video/mp4">
+         </video>
+         Or embed a YouTube/Vimeo iframe here.
+    -->
+    <div class="video-placeholder-content">
+      <div class="video-play-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 5.14v14l11-7-11-7z"/>
+        </svg>
+      </div>
+      <strong>Explainer video coming soon</strong>
+      <p>We're putting the finishing touches on it.<br>Sign up below to be notified when it's live.</p>
+    </div>
+  </div>
+
+  <!-- Sign-up via Google Form -->
+  <div class="google-form-wrapper">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdL0RGFy1vEIKJ3fEwDS8Gqxm_7rhKCvtdSCdXyS8RfVYuL7Q/viewform?embedded=true"
+      height="520"
+      loading="lazy"
+      title="ASSS interest list sign-up"
+    >Loading form…</iframe>
+  </div>
+
+</main>
+
+<!-- ── Footer bar ── -->
+<footer class="footer-bar">
+  ASSS · Utrecht University · Science-based Entrepreneurship 2026 · Smoke test — no product is available yet
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
