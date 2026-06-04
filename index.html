@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ASSS — Automated Smart Sample Storage</title>
-  <meta name="description" content="ASSS is an automated smart sample storage system that lets researchers find, retrieve, and return lab samples in seconds.">
+  <title>ASS — Automated Stocking System</title>
+  <meta name="description" content="ASS is a barcode-based software system that tracks lab consumables from delivery to reorder, so nothing goes missing and nothing gets ordered twice.">
   <link rel="stylesheet" href="style.css">
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -13,7 +13,7 @@
 <!-- ── Navbar ── -->
 <nav class="navbar">
   <a class="navbar-logo" href="#">
-    <img src="assets/logo.png" alt="ASSS logo" height="40">
+    <img src="assets/logo.png" alt="ASS logo" height="40">
   </a>
   <a href="video.html" onclick="trackClick('nav-cta')" class="btn-primary">See more →</a>
 </nav>
@@ -21,10 +21,9 @@
 <!-- ── Hero ── -->
 <section class="hero">
   <span class="hero-eyebrow">Science-based Entrepreneurship · Utrecht University</span>
-  <h1>Your lab samples, always where you need them.</h1>
+  <h1>Your lab consumables, always accounted for.</h1>
 
   <div class="hero-sketch">
-    <!-- Test tube SVG -->
     <span class="sketch-icon" aria-hidden="true">
       <svg width="48" height="96" viewBox="0 0 48 96" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M16 8 L16 68 Q16 84 24 84 Q32 84 32 68 L32 8" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round" fill="#E6F2FA"/>
@@ -35,7 +34,7 @@
     </span>
   </div>
 
-  <p class="hero-sub">ASSS is an automated smart sample storage system that lets researchers find, retrieve, and return lab samples in seconds — with temperature control, access management, and automatic restocking built in.</p>
+  <p class="hero-sub">ASS is a barcode-based software system for lab consumable management. It identifies chemicals on arrival, prints standardized labels, tracks stock across the lab, and reorders automatically when supplies run out.</p>
 
   <div class="cta-row">
     <a href="video.html" onclick="trackClick('hero-cta')" class="btn-primary">See more →</a>
@@ -46,11 +45,10 @@
 <!-- ── Quote banner ── -->
 <div class="quote-banner">
   <div class="quote-inner">
-    <p class="quote-text">"We spent a whole day looking for a sample. It was on another floor."</p>
-    <p class="quote-attr">— Lab researcher, prototype session feedback</p>
+    <p class="quote-text">"You spend a lot of time walking around, looking around, and you don't know if you're going to find it or not."</p>
+    <p class="quote-attr">— Lab researcher, on the current situation in their lab</p>
   </div>
 
-  <!-- Lab coat decorative -->
   <span class="quote-coat sketch-icon" aria-hidden="true">
     <svg width="90" height="120" viewBox="0 0 90 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M30 10 Q28 6 22 8 L8 18 Q4 22 6 30 L12 58" stroke="#9DCCE8" stroke-width="2.2" stroke-linecap="round" fill="none"/>
@@ -70,8 +68,8 @@
 <section class="problem-section">
   <div class="section-inner">
     <p class="section-label">The problem</p>
-    <h2>Lab storage is broken</h2>
-    <p class="section-body">In shared research labs, samples go missing, get mislabelled, or end up at the wrong temperature. Hours are wasted, experiments fail, and expensive reagents get reordered unnecessarily.</p>
+    <h2>Lab stock management is a mess</h2>
+    <p class="section-body">In shared research labs, consumables pile up in unmarked containers, stock levels exist only in someone's head, and chemicals get reordered weeks before they are actually needed, or not at all until it is too late.</p>
 
     <div class="problem-cards">
 
@@ -88,8 +86,8 @@
             </svg>
           </span>
         </div>
-        <h3>Hours lost per week</h3>
-        <p>Researchers waste time searching instead of doing science — samples hidden in the wrong fridge or mislabelled box.</p>
+        <h3>Nobody knows what is where</h3>
+        <p>Chemicals get stored wherever there is space. New people spend hours hunting for things that were there all along, just mislabelled or in a different fridge.</p>
       </div>
 
       <!-- Card 2: Lab coat with X -->
@@ -108,8 +106,8 @@
             </svg>
           </span>
         </div>
-        <h3>Compromised samples</h3>
-        <p>Wrong temperatures ruin samples silently. No automated monitoring means damage goes undetected until experiments fail.</p>
+        <h3>Duplicate orders pile up</h3>
+        <p>Without real-time stock data, the same chemical gets ordered multiple times from different people. Budgets take the hit without anyone noticing until it is too late.</p>
       </div>
 
       <!-- Card 3: Laptop -->
@@ -129,8 +127,8 @@
             </svg>
           </span>
         </div>
-        <h3>No access control</h3>
-        <p>Sensitive samples are accessible to everyone, leading to accidental contamination, mix-ups, and "sample theft".</p>
+        <h3>No paper trail for hazardous items</h3>
+        <p>Expensive or regulated chemicals get ordered by whoever asks first, with no record of why, no approval step, and no way to audit who used what.</p>
       </div>
 
     </div>
@@ -141,10 +139,10 @@
 <section class="solution-section">
   <div class="section-inner">
     <p class="section-label">The solution</p>
-    <h2>How ASSS works</h2>
+    <h2>How ASS works</h2>
 
     <div class="value-prop">
-      For lab researchers who want to easily locate their samples, ASSS is a smart storage system that provides optimised sample organisation — with automatic reordering and pre-dilution of stocks.
+      For labs where consumable management falls through the cracks, ASS is a barcode-based software system that logs every chemical from the moment it arrives to the moment it runs out, with automatic reordering and an approval workflow for restricted items.
     </div>
 
     <div class="timeline">
@@ -156,8 +154,8 @@
           <div class="step-line"></div>
         </div>
         <div class="step-content">
-          <h3>Log in with your researcher ID</h3>
-          <p>Scan your card for role-based access. Only see and retrieve samples you're authorised to use.</p>
+          <h3>Scan and label new arrivals</h3>
+          <p>Scan the supplier barcode when a chemical arrives. The system identifies it automatically. You print a standardized label, add any extra details on the touchscreen, and place the item wherever makes sense.</p>
         </div>
         <div class="step-sketch sketch-icon" aria-hidden="true">
           <svg width="40" height="68" viewBox="0 0 40 68" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,8 +174,8 @@
           <div class="step-line"></div>
         </div>
         <div class="step-content">
-          <h3>Search and select your sample</h3>
-          <p>Find any sample by name, ID, or category on the built-in screen. Results appear instantly.</p>
+          <h3>Find anything in seconds</h3>
+          <p>Any lab computer can search the full inventory by name, ID, or chemical category. Location, storage conditions, expiry date, and who last used it are all one search away.</p>
         </div>
         <div class="step-sketch sketch-icon" aria-hidden="true">
           <svg width="62" height="48" viewBox="0 0 62 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -202,8 +200,8 @@
           <div class="step-line"></div>
         </div>
         <div class="step-content">
-          <h3>The machine retrieves it for you</h3>
-          <p>The correct temperature zone is selected automatically. Your sample is dispensed within 30 seconds.</p>
+          <h3>Empty container? Scan and confirm.</h3>
+          <p>When stock runs out, scan the label and confirm. The system checks whether the item exists elsewhere in the lab before placing any order. If it is genuinely depleted, the order goes out automatically and both the student and the technician get an email.</p>
         </div>
         <div class="step-sketch sketch-icon" aria-hidden="true">
           <svg width="52" height="72" viewBox="0 0 52 72" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -230,8 +228,8 @@
           <div class="step-line"></div>
         </div>
         <div class="step-content">
-          <h3>Return, log, reorder — automatically</h3>
-          <p>On return, the system re-sorts the sample, logs usage for reproducibility, and auto-reorders when stock is low.</p>
+          <h3>Restricted items need approval</h3>
+          <p>For expensive or hazardous chemicals, students submit a request through the system instead of ordering directly. The lab technician reviews it and either approves or rejects it. The student gets an email either way, including a reason if the request was turned down.</p>
         </div>
         <div class="step-sketch sketch-icon" aria-hidden="true">
           <svg width="40" height="68" viewBox="0 0 40 68" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -250,16 +248,16 @@
     <!-- Metric cards -->
     <div class="metrics">
       <div class="metric-card">
-        <div class="metric-value">≤30s</div>
-        <div class="metric-label">Average sample retrieval time</div>
-      </div>
-      <div class="metric-card">
         <div class="metric-value">100%</div>
-        <div class="metric-label">Usage logs for reproducibility</div>
+        <div class="metric-label">Full audit trail on every order and stock change</div>
       </div>
       <div class="metric-card">
         <div class="metric-value">Zero</div>
-        <div class="metric-label">Manual reorder actions needed</div>
+        <div class="metric-label">Duplicate orders when real-time stock is visible</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">Auto</div>
+        <div class="metric-label">Reordering when stock runs out, no manual action needed</div>
       </div>
     </div>
 
@@ -268,14 +266,14 @@
 
 <!-- ── Footer CTA ── -->
 <div class="footer-cta">
-  <h2>Interested in ASSS for your lab?</h2>
-  <p>We are currently validating demand. Sign up to be among the first to try it.</p>
-  <a href="video.html" onclick="trackClick('footer-cta')" class="btn-white">See more →</a>
+  <h2>Interested in ASS for your lab?</h2>
+  <p>We are currently testing demand before we build. Sign up to be among the first labs to try it.</p>
+  <a href="video.html#signup-form" onclick="trackClick('footer-cta')" class="btn-white">Sign up for early access</a>
 </div>
 
 <!-- ── Footer bar ── -->
 <footer class="footer-bar">
-  ASSS · Utrecht University · Science-based Entrepreneurship 2026 · Smoke test — no product is available yet
+  ASS · Utrecht University · Science-based Entrepreneurship 2026 · Smoke test, no product available yet
 </footer>
 
 <script src="script.js"></script>

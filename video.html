@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ASSS — See how it works</title>
-  <meta name="description" content="Watch how ASSS automates lab sample storage and sign up for early access.">
+  <title>ASS — How it works</title>
+  <meta name="description" content="See how ASS handles lab consumable management from receipt to reorder, and sign up for early access.">
   <link rel="stylesheet" href="style.css">
   <script defer src="/_vercel/insights/script.js"></script>
   <style>
     /* ── Video page specific ── */
 
     .video-page-main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 3.5rem 2rem 4rem;
     }
@@ -42,86 +42,108 @@
       line-height: 1.65;
     }
 
-    /* ── Video placeholder ── */
+    /* ── How it works visual ── */
 
-    .video-wrapper {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background: var(--blue-darkest);
-      border-radius: 16px;
-      overflow: hidden;
+    .how-it-works-visual {
       margin-bottom: 3rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      color: #fff;
-      position: relative;
     }
 
-    .video-wrapper video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .video-placeholder-content {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .video-play-icon {
-      width: 72px;
-      height: 72px;
-      background: rgba(255,255,255,0.15);
-      border: 2px solid rgba(255,255,255,0.4);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.25rem;
-    }
-
-    .video-play-icon svg {
-      margin-left: 4px;
-    }
-
-    .video-placeholder-content p {
-      font-size: 15px;
-      color: var(--blue-mid);
-      margin-top: 0.5rem;
-    }
-
-    .video-placeholder-content strong {
-      display: block;
-      font-size: 18px;
-      font-weight: 500;
-      color: #fff;
-    }
-
-    /* ── Sign-up section ── */
-
-    .signup-section {
+    .process-section {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 2.5rem 2rem;
+      padding: 2rem 2rem 2rem;
+      margin-bottom: 1.25rem;
     }
 
-    .signup-section h2 {
+    .process-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .process-num {
+      background: var(--blue-primary);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      font-family: 'DM Sans', sans-serif;
+      padding: 4px 10px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      margin-top: 3px;
+      letter-spacing: 0.05em;
+    }
+
+    .process-header h3 {
       font-family: 'DM Serif Display', serif;
-      font-size: 26px;
-      margin-bottom: 0.5rem;
+      font-size: 22px;
+      margin-bottom: 0.25rem;
+      line-height: 1.2;
     }
 
-    .signup-section p {
-      font-size: 15px;
+    .process-header p {
+      font-size: 14px;
       color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
+      line-height: 1.55;
     }
+
+    .process-steps {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    .process-step {
+      flex: 1;
+      min-width: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 0.5rem;
+    }
+
+    .ps-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--blue-light);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .ps-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 0.3rem;
+      line-height: 1.3;
+    }
+
+    .ps-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .ps-arrow {
+      color: var(--blue-mid);
+      font-size: 20px;
+      padding: 0 2px;
+      margin-top: 16px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    /* ── Sign-up section ── */
 
     .google-form-wrapper {
       width: 100%;
@@ -148,9 +170,26 @@
 
     .back-link:hover { color: var(--blue-primary); }
 
+    .signup-heading {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      margin-bottom: 0.5rem;
+    }
+
+    .signup-lead {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
     @media (max-width: 600px) {
       .video-page-main { padding: 2rem 1.25rem 3rem; }
       .video-page-main h1 { font-size: 28px; }
+      .process-steps { flex-direction: column; align-items: stretch; gap: 1rem; }
+      .ps-arrow { display: none; }
+      .process-step { flex-direction: row; text-align: left; align-items: center; gap: 1rem; min-width: unset; }
+      .ps-icon { margin-bottom: 0; flex-shrink: 0; }
     }
   </style>
 </head>
@@ -169,47 +208,252 @@
 
   <a href="index.html" class="back-link">← Back to overview</a>
 
-  <span class="video-eyebrow">ASSS in action</span>
-  <h1>See how ASSS works</h1>
-  <p class="lead">Watch the short explainer below, then sign up to be among the first labs to try ASSS.</p>
+  <span class="video-eyebrow">How ASS works</span>
+  <h1>From delivery to reorder, handled automatically.</h1>
+  <p class="lead">ASS covers three core flows: receiving new stock, tracking and reordering consumables, and handling restricted items that need approval before anyone can order them.</p>
 
-  <!-- Video — replace the placeholder once your video is ready -->
-  <div class="video-wrapper" id="video-wrapper">
-    <!-- To add your video: replace this block with:
-         <video controls poster="assets/video-poster.jpg">
-           <source src="assets/asss-explainer.mp4" type="video/mp4">
-         </video>
-         Or embed a YouTube/Vimeo iframe here.
-    -->
-    <div class="video-placeholder-content">
-      <div class="video-play-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 5.14v14l11-7-11-7z"/>
-        </svg>
+  <!-- ── Visual step plan ── -->
+  <div class="how-it-works-visual">
+
+    <!-- Process 1: Receiving -->
+    <div class="process-section">
+      <div class="process-header">
+        <div class="process-num">01</div>
+        <div>
+          <h3>Receiving a product</h3>
+          <p>A new chemical arrives. Scan the supplier barcode and the system handles the rest.</p>
+        </div>
       </div>
-      <strong>Explainer video coming soon</strong>
-      <p>We're putting the finishing touches on it.<br>Sign up below to be notified when it's live.</p>
+      <div class="process-steps">
+
+        <div class="process-step">
+          <div class="ps-icon">
+            <!-- Barcode scan icon -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <rect x="3" y="5" width="22" height="18" rx="2" stroke="#2B7DB8" stroke-width="2" fill="none"/>
+              <line x1="8" y1="8" x2="8" y2="20" stroke="#2B7DB8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="11" y1="8" x2="11" y2="20" stroke="#2B7DB8" stroke-width="1.3" stroke-linecap="round"/>
+              <line x1="14" y1="8" x2="14" y2="20" stroke="#2B7DB8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="17" y1="8" x2="17" y2="20" stroke="#2B7DB8" stroke-width="1.3" stroke-linecap="round"/>
+              <line x1="20" y1="8" x2="20" y2="20" stroke="#2B7DB8" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="ps-title">Scan the barcode</div>
+          <div class="ps-desc">Any supplier barcode, any package size</div>
+        </div>
+
+        <div class="ps-arrow">→</div>
+
+        <div class="process-step">
+          <div class="ps-icon">
+            <!-- AI / magnifier icon -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="7" stroke="#2B7DB8" stroke-width="2" fill="none"/>
+              <line x1="17" y1="17" x2="24" y2="24" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="9" y1="12" x2="15" y2="12" stroke="#2B7DB8" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="12" y1="9" x2="12" y2="15" stroke="#2B7DB8" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="ps-title">AI identifies it</div>
+          <div class="ps-desc">Substance name, quantity, and package size confirmed automatically</div>
+        </div>
+
+        <div class="ps-arrow">→</div>
+
+        <div class="process-step">
+          <div class="ps-icon">
+            <!-- Label / printer icon -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <rect x="4" y="4" width="20" height="14" rx="2" stroke="#2B7DB8" stroke-width="2" fill="none"/>
+              <line x1="8" y1="9" x2="20" y2="9" stroke="#2B7DB8" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="8" y1="12" x2="16" y2="12" stroke="#2B7DB8" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="7" y="18" width="14" height="7" rx="1" stroke="#2B7DB8" stroke-width="1.8" fill="none"/>
+              <line x1="9" y1="21" x2="19" y2="21" stroke="#2B7DB8" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="ps-title">Print a lab label</div>
+          <div class="ps-desc">Add your name, date, storage location, expiry, and any other notes via the touchscreen</div>
+        </div>
+
+        <div class="ps-arrow">→</div>
+
+        <div class="process-step">
+          <div class="ps-icon">
+            <!-- Shelf / place icon -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <line x1="4" y1="22" x2="24" y2="22" stroke="#2B7DB8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="4" y1="15" x2="24" y2="15" stroke="#2B7DB8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="6" y1="6" x2="6" y2="22" stroke="#2B7DB8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="22" y1="6" x2="22" y2="22" stroke="#2B7DB8" stroke-width="2" stroke-linecap="round"/>
+              <rect x="10" y="17" width="4" height="5" rx="1" stroke="#2B7DB8" stroke-width="1.5" fill="#E6F2FA"/>
+              <rect x="16" y="17" width="4" height="5" rx="1" stroke="#2B7DB8" stroke-width="1.5" fill="#E6F2FA"/>
+            </svg>
+          </div>
+          <div class="ps-title">Apply and place</div>
+          <div class="ps-desc">You choose where it goes. The system logs it.</div>
+        </div>
+
+      </div>
     </div>
+
+    <!-- Process 2: Using and reordering -->
+    <div class="process-section">
+      <div class="process-header">
+        <div class="process-num">02</div>
+        <div>
+          <h3>Using and reordering</h3>
+          <p>When a container is empty, one scan is enough to update stock and trigger an order if needed.</p>
+        </div>
+      </div>
+      <div class="process-steps">
+
+        <div class="process-step">
+          <div class="ps-icon">
+            <!-- Login / ID icon -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <rect x="4" y="7" width="16" height="12" rx="2" stroke="#2B7DB8" stroke-width="2" fill="none"/>
+              <circle cx="10" cy="13" r="2.5" stroke="#2B7DB8" stroke-width="1.5" fill="none"/>
+              <line x1="14" y1="11" x2="17" y2="11" stroke="#2B7DB8" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="14" y1="14" x2="17" y2="14" stroke="#2B7DB8" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M22 13 L25 13 M23 11 L25 13 L23 15" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="ps-title">Log in and scan</div>
+          <div class="ps-desc">Use your university account, then scan the label on the empty container</div>
+        </div>
+
+        <div class="ps-arrow">→</div>
+
+        <div class="process-step">
+          <div class="ps-icon">
+            <!-- Stock check icon -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <rect x="4" y="4" width="20" height="20" rx="3" stroke="#2B7DB8" stroke-width="2" fill="none"/>
+              <line x1="8" y1="20" x2="8" y2="14" stroke="#2B7DB8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="13" y1="20" x2="13" y2="10" stroke="#2B7DB8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="18" y1="20" x2="18" y2="16" stroke="#2B7DB8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="6" y1="8" x2="22" y2="8" stroke="#2B7DB8" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="2 2"/>
+            </svg>
+          </div>
+          <div class="ps-title">Stock check</div>
+          <div class="ps-desc">System checks if the item is still available elsewhere in the lab before ordering</div>
+        </div>
+
+        <div class="ps-arrow">→</div>
+
+        <div class="process-step">
+          <div class="ps-icon">
+            <!-- Order / cart icon -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M4 5 L7 5 L10 18 L22 18" stroke="#2B7DB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <path d="M7 5 L9 14 L22 14 L20 8 L7 8" stroke="#2B7DB8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#E6F2FA"/>
+              <circle cx="12" cy="22" r="2" stroke="#2B7DB8" stroke-width="1.8" fill="none"/>
+              <circle cx="20" cy="22" r="2" stroke="#2B7DB8" stroke-width="1.8" fill="none"/>
+            </svg>
+          </div>
+          <div class="ps-title">Order placed</div>
+          <div class="ps-desc">If stock is gone, one confirmation places the order automatically</div>
+        </div>
+
+        <div class="ps-arrow">→</div>
+
+        <div class="process-step">
+          <div class="ps-icon">
+            <!-- Email icon -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <rect x="3" y="7" width="22" height="16" rx="2" stroke="#2B7DB8" stroke-width="2" fill="none"/>
+              <path d="M3 9 L14 17 L25 9" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="ps-title">Email confirmation</div>
+          <div class="ps-desc">Both the student and the lab technician get an email with order details and delivery time</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Process 3: Authorization -->
+    <div class="process-section">
+      <div class="process-header">
+        <div class="process-num">03</div>
+        <div>
+          <h3>Authorization for restricted items</h3>
+          <p>Students cannot order hazardous or expensive chemicals directly. They submit a request and the technician decides.</p>
+        </div>
+      </div>
+      <div class="process-steps">
+
+        <div class="process-step">
+          <div class="ps-icon">
+            <!-- Form / request icon -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <rect x="5" y="3" width="18" height="22" rx="2" stroke="#2B7DB8" stroke-width="2" fill="none"/>
+              <line x1="9" y1="9" x2="19" y2="9" stroke="#2B7DB8" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="9" y1="13" x2="19" y2="13" stroke="#2B7DB8" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="9" y1="17" x2="15" y2="17" stroke="#2B7DB8" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="21" cy="21" r="5" stroke="#2B7DB8" stroke-width="1.8" fill="#E6F2FA"/>
+              <line x1="21" y1="19" x2="21" y2="23" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="19" y1="21" x2="23" y2="21" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="ps-title">Request submitted</div>
+          <div class="ps-desc">Student submits a request through the system for a restricted chemical</div>
+        </div>
+
+        <div class="ps-arrow">→</div>
+
+        <div class="process-step">
+          <div class="ps-icon">
+            <!-- Review / approve icon -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <circle cx="14" cy="14" r="10" stroke="#2B7DB8" stroke-width="2" fill="none"/>
+              <path d="M9 14 L13 18 L20 10" stroke="#2B7DB8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="ps-title">Technician reviews</div>
+          <div class="ps-desc">Lab technician approves or rejects, and adds a reason if rejecting</div>
+        </div>
+
+        <div class="ps-arrow">→</div>
+
+        <div class="process-step">
+          <div class="ps-icon">
+            <!-- Notification / bell icon -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M14 4 C10 4 7 7 7 12 L7 19 L21 19 L21 12 C21 7 18 4 14 4 Z" stroke="#2B7DB8" stroke-width="2" fill="#E6F2FA"/>
+              <line x1="5" y1="19" x2="23" y2="19" stroke="#2B7DB8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M11 19 Q11 23 14 23 Q17 23 17 19" stroke="#2B7DB8" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="ps-title">Student notified</div>
+          <div class="ps-desc">Email with the outcome and, if rejected, the reason why</div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 
   <!-- Sign-up via Google Form -->
+  <h2 class="signup-heading">Sign up for early access</h2>
+  <p class="signup-lead">We are testing demand before we build. Fill in the form below and we will be in touch when we launch.</p>
   <div id="signup-form" class="google-form-wrapper">
     <iframe
       src="https://docs.google.com/forms/d/e/1FAIpQLSdL0RGFy1vEIKJ3fEwDS8Gqxm_7rhKCvtdSCdXyS8RfVYuL7Q/viewform?embedded=true"
       height="600"
       loading="lazy"
-      title="ASSS interest list sign-up"
-    >Loading form…</iframe>
+      title="ASS interest list sign-up"
+    >Loading form...</iframe>
   </div>
   <p style="text-align:center; margin-top: 0.75rem; font-size:14px; color: var(--text-muted);">
-    Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdL0RGFy1vEIKJ3fEwDS8Gqxm_7rhKCvtdSCdXyS8RfVYuL7Q/viewform" target="_blank" style="color: var(--blue-primary);">Open it here →</a>
+    Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdL0RGFy1vEIKJ3fEwDS8Gqxm_7rhKCvtdSCdXyS8RfVYuL7Q/viewform" target="_blank" style="color: var(--blue-primary);">Open it here</a>
   </p>
 
 </main>
 
 <!-- ── Footer bar ── -->
 <footer class="footer-bar">
-  ASSS · Utrecht University · Science-based Entrepreneurship 2026 · Smoke test — no product is available yet
+  ASS · Utrecht University · Science-based Entrepreneurship 2026 · Smoke test, no product available yet
 </footer>
 
 <script src="script.js"></script>
